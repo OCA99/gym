@@ -66,6 +66,8 @@ class Env(Generic[ObsType, ActType]):
     def np_random(self, value: RandomNumberGenerator):
         self._np_random = value
 
+    global step
+
     def step(self, action: ActType) -> Tuple[ObsType, float, bool, dict]:
         """Run one timestep of the environment's dynamics.
 
